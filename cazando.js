@@ -18,8 +18,8 @@ const ANCHO_COMIDA = 30;
 function iniciarJuego(){
     gatoX = (cmpCanvas.width / 2) - (ANCHO_GATO / 2);
     gatoY = (cmpCanvas.height / 2) - (ALTO_GATO / 2);
-    comidaX = cmpCanvas.width - ANCHO_COMIDA;
-    comidaY = cmpCanvas.height - ALTO_COMIDA;
+    comidaX = generarRandom(0, cmpCanvas.width - ANCHO_COMIDA);
+    comidaY = generarRandom(0, cmpCanvas.height - ALTO_COMIDA);
     graficarGato();
     graficarComida();
     actualizarPantalla();
