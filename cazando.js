@@ -6,6 +6,10 @@ let gatoY = 0;
 let comidaX = 0;
 let comidaY = 0;
 
+let movimientos = 20;
+
+let puntaje = 0;
+
 const ALTO_GATO = 60;
 const ANCHO_GATO = 60;
 const ALTO_COMIDA = 30;
@@ -30,7 +34,13 @@ function detectarColision(){
        gatoX + ANCHO_GATO > comidaX &&
        gatoY < comidaY + ALTO_COMIDA &&
        gatoY + ALTO_GATO > comidaY){
-        alert("Comidita mmm");
+
+        comidaX = generarRandom(0, cmpCanvas.width - ANCHO_COMIDA);
+        comidaY = generarRandom(0, cmpCanvas.height - ALTO_COMIDA);
+        actualizarPantalla();
+
+        puntaje = puntaje + 1;
+        mostrarEnSpan("txtPuntaje", puntaje);
     }
 }
 
@@ -43,21 +53,21 @@ function graficarComida(){
 }
 
 function moverIzquierda(){
-    gatoX = gatoX - 10;
+    gatoX = gatoX - movimientos;
     actualizarPantalla();
 }
 
 function moverDerecha(){
-    gatoX = gatoX + 10;
+    gatoX = gatoX + movimientos;
     actualizarPantalla();
 }
 
 function moverArriba(){
-    gatoY = gatoY - 10;
+    gatoY = gatoY - movimientos;
     actualizarPantalla();
 }
 
 function moverAbajo(){
-    gatoY = gatoY + 10;
+    gatoY = gatoY + movimientos;
     actualizarPantalla();
 }
