@@ -25,6 +25,15 @@ function limpiarCanva(){
     contexto.clearRect(0, 0, cmpCanvas.width, cmpCanvas.height);
 }
 
+function detectarColision(){
+    if(gatoX < comidaX + ANCHO_COMIDA &&
+       gatoX + ANCHO_GATO > comidaX &&
+       gatoY < comidaY + ALTO_COMIDA &&
+       gatoY + ALTO_GATO > comidaY){
+        alert("Comidita mmm");
+    }
+}
+
 function graficarGato(){
     graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#f16d30");
 }

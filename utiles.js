@@ -20,4 +20,5 @@ function actualizarPantalla(){
     limpiarCanva();
     graficarGato();
     graficarComida();
+    detectarColision();
 }
