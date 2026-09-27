@@ -6,9 +6,11 @@ let gatoY = 0;
 let comidaX = 0;
 let comidaY = 0;
 
-let movimientos = 20;
+let movimientos = 25;
 
 let puntaje = 0;
+let tiempo = 20;
+let intervalo;
 
 const ALTO_GATO = 60;
 const ANCHO_GATO = 60;
@@ -23,6 +25,27 @@ function iniciarJuego(){
     graficarGato();
     graficarComida();
     actualizarPantalla();
+    intervalo = setInterval(restarTiempo, 1000);
+}
+
+function reiniciar(){
+    puntaje=0;
+    tiempo=20;
+    mostrarEnSpan("txtPuntaje", puntaje);
+    mostrarEnSpan("txtTiempo", tiempo);
+
+    clearInterval(intervalo);
+    iniciarJuego();
+}
+
+function restarTiempo(){
+    tiempo = tiempo - 1;
+    mostrarEnSpan("txtTiempo", tiempo);
+    if(tiempo == 0){
+        alert("GAME OVER");
+        clearInterval(intervalo);
+        reiniciar();
+    }
 }
 
 function limpiarCanva(){
@@ -39,8 +62,14 @@ function detectarColision(){
         comidaY = generarRandom(0, cmpCanvas.height - ALTO_COMIDA);
         actualizarPantalla();
 
-        puntaje = puntaje + 1;
-        mostrarEnSpan("txtPuntaje", puntaje);
+    puntaje = puntaje + 1;
+    mostrarEnSpan("txtPuntaje", puntaje);
+
+    if(puntaje == 6){
+        alert("Conseguiste la comida, ahora tu gato crecera. ");
+        clearInterval(intervalo);
+        reiniciar();
+        }
     }
 }
 
