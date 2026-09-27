@@ -12,8 +12,8 @@ let puntaje = 0;
 let tiempo = 20;
 let intervalo;
 
-const ALTO_GATO = 60;
-const ANCHO_GATO = 60;
+const ALTO_GATO = 45;
+const ANCHO_GATO = 50;
 const ALTO_COMIDA = 30;
 const ANCHO_COMIDA = 30;
 
@@ -42,7 +42,7 @@ function restarTiempo(){
     tiempo = tiempo - 1;
     mostrarEnSpan("txtTiempo", tiempo);
     if(tiempo == 0){
-        alert("GAME OVER");
+        alert("Juego Terminado.");
         clearInterval(intervalo);
         reiniciar();
     }
@@ -74,11 +74,11 @@ function detectarColision(){
 }
 
 function graficarGato(){
-    graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#f16d30");
+    graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#a06a51");
 }
 
 function graficarComida(){
-    graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#523734");
+    graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#343d1f");
 }
 
 function moverIzquierda(){
@@ -99,4 +99,8 @@ function moverArriba(){
 function moverAbajo(){
     gatoY = gatoY + movimientos;
     actualizarPantalla();
+}
+
+function desaparecerPersonaje(){
+    contexto.clearRect(gatoX, gatoY, ANCHO_GATO, ALTO_GATO);
 }
