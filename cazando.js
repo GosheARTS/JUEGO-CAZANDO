@@ -11,13 +11,6 @@ const ANCHO_GATO = 60;
 const ALTO_COMIDA = 30;
 const ANCHO_COMIDA = 30;
 
-function graficarGato(){
-    graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#f16d30");
-}
-
-function graficarComida(){
-    graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#523734");
-}
 function iniciarJuego(){
     gatoX = (cmpCanvas.width / 2) - (ANCHO_GATO / 2);
     gatoY = (cmpCanvas.height / 2) - (ALTO_GATO / 2);
@@ -25,8 +18,22 @@ function iniciarJuego(){
     comidaY = cmpCanvas.height - ALTO_COMIDA;
     graficarGato();
     graficarComida();
+    actualizarPantalla();
 }
-function graficarRectangulo(x, y, ancho, alto, color){
-    contexto.fillStyle = color;
-    contexto.fillRect(x, y, ancho, alto);
+
+function limpiarCanva(){
+    contexto.clearRect(0, 0, cmpCanvas.width, cmpCanvas.height);
+}
+
+function graficarGato(){
+    graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#f16d30");
+}
+
+function graficarComida(){
+    graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#523734");
+}
+
+function moverIzquierda(){
+    gatoX = gatoX - 10;
+    actualizarPantalla();
 }
