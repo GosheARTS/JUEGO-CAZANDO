@@ -65,7 +65,7 @@ function detectarColision(){
     puntaje = puntaje + 1;
     mostrarEnSpan("txtPuntaje", puntaje);
 
-    if(puntaje == 6){
+    if(puntaje == 10){
         alert("Conseguiste la comida, ahora tu gato crecera. ");
         clearInterval(intervalo);
         reiniciar();
