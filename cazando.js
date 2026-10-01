@@ -74,11 +74,14 @@ function detectarColision(){
 }
 
 function graficarGato(){
-    graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#a06a51");
+    graficarRectangulo(gatoX, gatoY, ANCHO_GATO, ALTO_GATO, "#2c2c2a");
 }
 
 function graficarComida(){
-    graficarRectangulo(comidaX, comidaY, ANCHO_COMIDA, ALTO_COMIDA, "#343d1f");
+    contexto.fillStyle = "#639922";
+    contexto.beginPath();
+    contexto.arc(comidaX+ANCHO_COMIDA/2, comidaY+ALTO_COMIDA/2, ANCHO_COMIDA/2, 0, Math.PI*2);
+    contexto.fill();
 }
 
 function moverIzquierda(){
