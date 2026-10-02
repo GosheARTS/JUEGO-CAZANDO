@@ -1,0 +1,13 @@
+PROMPT 1: Utilizada la IA para indagar antes y optar por opciones para el desarrollo del proyecto antes de aplicar cambios directos.
+Segun mi pedido Original mejoro el Prompt con "mejores palabras" como se lo solicite.
+
+Rol: Actúa como un desarrollador frontend experto en HTML y CSS, ayudándome a
+mejorar la interfaz gráfica de un mini juego hecho en JavaScript con canvas.
+
+Restricción: Solo se permite modificar los archivos HTML y CSS del proyecto.
+No se debe modificar el archivo JavaScript.
+
+Solicitud: Quiero aplicarle a mi "Juego Cazando" la misma estética visual que
+ya tiene mi otro proyecto, "Juego Limones": una paleta de colores minimalista
+(fondo beige claro, elementos en gris oscuro y verde), botones con forma de
+píldora y efecto hover, y un canvas con borde definido y bordes redondeados.
