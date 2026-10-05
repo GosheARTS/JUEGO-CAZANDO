@@ -6,30 +6,33 @@
 </head>
 <body onload="iniciarJuego();">
 
-  <h1>Juego Cazando</h1>
-  <p>Autor: Goshe~ARTS</p>
-  <canvas id="areaJuego" width="500" height="500"></canvas>
-  <div class="controles">
-    <button onclick="moverArriba();">⬆</button>
-    <br>
-    <button onclick="moverIzquierda();">⬅</button>
-    <button onclick="moverAbajo();">⬇</button>
-    <button onclick="moverDerecha();">➡</button>
-    <br>
-    <button id="botonReiniciar" onclick="reiniciar();">Reiniciar</button>
-    <br>
-    <button onclick="desaparecerPersonaje();">DEsAPARECE</button>
+  <div class="juego-contenedor">
+    <h1>
+      <img src="icono-gato.png" alt="icono gato" class="iconoTitulo">
+      Juego Cazando
+    </h1>
+    <p>Autor: Goshe~ARTS</p>
+    <canvas id="areaJuego" width="500" height="500"></canvas>
+    
+    <div class="controles">
+      <button onclick="moverArriba();">⬆</button>
+      <br>
+      <button onclick="moverIzquierda();">⬅</button>
+      <button onclick="moverAbajo();">⬇</button>
+      <button onclick="moverDerecha();">➡</button>
+      <br>
+      <button id="botonReiniciar" onclick="reiniciar();">Reiniciar</button>
+    </div>
+
+    <div class="panel">
+      <span>Puntos: <span id="txtPuntaje">0</span></span>
+      <span>Tiempo: <span id="txtTiempo">20</span></span>
+    </div>
+
+    <p id="mensaje"></p>
   </div>
 
-
-  <div class="panel">
-    <span>Puntos: <span id="txtPuntaje">0</span></span>
-    <span>Tiempo: <span id="txtTiempo">20</span></span>
-  </div>
-
-  <p id="mensaje"></p>
-
-<script src="cazando.js"></script>
-<script src="utiles.js"> </script>
+  <script src="cazando.js"></script>
+  <script src="utiles.js"></script>
 </body>
 </html>

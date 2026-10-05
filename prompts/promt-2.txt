@@ -1,0 +1,18 @@
+PROMPT 2: me dic cuenta de que la IA modifico mi acrhivo JS y el resultado fue de mi agrado pues cambio el color del gato, de la comida y cambio fillrect por arc haciendo que la comida sea un circulo, pero no preste suficiente atencion al documento con las instrucciones.
+
+El siguiente promt soluciona los errores mas graves y me ayuda a dar un  mejor aspecto al "juego" sin cambiar el archivo JS.
+
+
+Rol: Actúa como un desarrollador frontend experto en HTML y CSS, ayudándome a
+corregir y completar la mejora visual de mi "Juego Cazando".
+
+Correccion importante: El commit anterior modificó incorrectamente el archivo
+JavaScript (colores y forma de los elementos dibujados en el canvas), lo cual
+incumple la regla del ejercicio de modificar únicamente HTML y CSS. Se revirtió
+cazando.js a su estado original.
+
+Solicitud Parte 2: Agregar imágenes reales al proyecto (un ícono decorativo
+junto al título, fuera del canvas) e incorporar una imagen de fondo (background)
+en la página mediante CSS, usando una imagen obtenida de internet. Envolver el
+contenido del juego en un contenedor con fondo semi-transparente para mantener
+la legibilidad sobre el nuevo fondo con imagen.
